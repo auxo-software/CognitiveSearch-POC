@@ -143,7 +143,7 @@
      </div>`;
 
     // add a results view using the template defined above
-    automagic.addResults("results", { count: true }, resultTemplate);
+    automagic.addResults("results", { count: true, apiVersion: "2023-07-01-Preview" }, resultTemplate);
     
     // Adds a pager control << 1 2 3 ... >>
     automagic.addPager("pager");
@@ -173,7 +173,8 @@
             highlightPreTag: "<b>",
             highlightPostTag: "</b>",
             suggesterName: "sg",
-            select: "HotelName,Address/Country,Address/City,Rooms/Type,Tags"
+            select: "HotelName,Address/Country,Address/City,Rooms/Type,Tags",
+            apiVersion: "2023-07-01-Preview"
         },
         "",
         suggestionsTemplate);
